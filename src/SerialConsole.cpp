@@ -22,6 +22,19 @@ void serialLogPrintf(char *level, char *format, ...)
   Serial.printf("%-7s %s", levelF, text);
 }
 
+void serialPrintf(char *format, ...)
+{
+  char text[256];
+
+  // format message
+  va_list args;
+  va_start(args, format);
+  vsnprintf(text, sizeof(text), format, args);
+  va_end(args);
+
+  Serial.print(text);
+}
+
 void serialPrintln(char *format)
 {
   Serial.println(format);

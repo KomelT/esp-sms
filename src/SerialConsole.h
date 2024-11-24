@@ -8,4 +8,5 @@
 
 void serialInit();
 void serialLogPrintf(char *level, char *format, ...);
+void serialPrintf(char *format, ...);
 void serialPrintln(char *format);
