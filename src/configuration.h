@@ -1,6 +1,7 @@
 #pragma once
 
 #include <Arduino.h>
+#include "DebugConfiguration.h"
 
 #ifndef WIFI_SSID
 #define WIFI_SSID "ESP_SMS_WiFi"

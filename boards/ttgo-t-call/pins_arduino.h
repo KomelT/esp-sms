@@ -12,11 +12,11 @@
 #define digitalPinHasPWM(p) (p < 34)
 
 // Sim800
-#define SIM800_TX 26
-#define SIM800_RX 27
-#define PWKEY 4
-#define SIM800_RST 5
-#define SIM800_POWER 23
+#define MODEM_TX 26
+#define MODEM_RX 27
+#define MODEM_PWRKEY 4
+#define MODEM_RST 5
+#define MODEM_POWER_ON 23
 
 static const uint8_t LED_BUILTIN = 13;
 #define BUILTIN_LED LED_BUILTIN // backward compatibility
