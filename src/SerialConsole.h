@@ -7,6 +7,6 @@
 #endif
 
 void serialInit();
-void serialLogPrintf(char *level, char *format, ...);
-void serialPrintf(char *format, ...);
-void serialPrintln(char *format);
+void serialLogPrintf(String level, String format, ...);
+void serialPrintf(String format, ...);
+void serialPrintln(String format);
