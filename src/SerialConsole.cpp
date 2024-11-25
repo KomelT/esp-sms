@@ -10,15 +10,15 @@ void serialLogPrintf(String level, String format, ...)
 {
   // format level
   int levelf_size = sizeof(char) * level.length() + 3;
-  char *levelf = (char *)malloc(levelf_size);
+  char *levelf = static_cast<char *>(malloc(levelf_size));
   snprintf(levelf, levelf_size, "[%s]", level.c_str());
 
   // format message
   int formatc_size = sizeof(char) * format.length() + 1;
-  char *formatc = (char *)malloc(formatc_size);
+  char *formatc = static_cast<char *>(malloc(formatc_size));
   strcpy(formatc, format.c_str());
 
-  char *text = (char *)malloc(formatc_size * 2);
+  char *text = static_cast<char *>(malloc(formatc_size * 2));
 
   va_list args;
   va_start(args, format);
@@ -36,8 +36,8 @@ void serialPrintf(String format, ...)
 {
   // format message
   int format_size = sizeof(char) * format.length() + 1;
-  char *text = (char *)malloc(format_size * 2);
-  char *formatc = (char *)format.c_str();
+  char *text = static_cast<char *>(malloc(format_size * 2));
+  const char *formatc = format.c_str();
   va_list args;
   va_start(args, format);
   vsnprintf(text, format_size * 2, formatc, args);
