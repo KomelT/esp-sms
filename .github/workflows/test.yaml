@@ -14,4 +14,4 @@ jobs:
         run: python3 get-platformio.py
 
       - name: Check
-        run: pio check
+        run: platformio check
