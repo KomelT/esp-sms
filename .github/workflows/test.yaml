@@ -7,14 +7,12 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - name: List
-        run: ls -la
-        
       - name: Wget PIO
         run: wget -O get-platformio.py https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py
-      
+
       - name: Install PIO
         run: python3 get-platformio.py
 
+      - uses: actions/checkout@v4
       - name: Check
         run: ~/.platformio/penv/bin/pio check
