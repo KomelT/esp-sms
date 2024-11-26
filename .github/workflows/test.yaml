@@ -13,8 +13,5 @@ jobs:
       - name: Install PIO
         run: python3 get-platformio.py
 
-      - name: Add path
-        run: mkdir -p /usr/local/bin && ln -s ~/.platformio/penv/bin/pio /usr/local/bin/pio \
-
       - name: Check
-        run: platformio check
+        run: ~/.platformio/penv/bin/pio check
