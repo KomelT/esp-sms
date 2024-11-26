@@ -1,5 +1,4 @@
 #include "../configuration.h"
-#include "../utilities.h"
 
 // Set serial for AT commands (to the module)
 #define SerialAT  Serial1
