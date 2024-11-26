@@ -7,6 +7,9 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
+      - name: List
+        run: ls -la
+        
       - name: Wget PIO
         run: wget -O get-platformio.py https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio.py
       
