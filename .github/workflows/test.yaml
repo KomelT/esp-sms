@@ -1,0 +1,17 @@
+name: Test
+
+on:
+  push:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wget PIO
+        run: wget -O get-platformio.py https://raw.githubusercontent.com/platformio/platformio-core-installer/master/get-platformio
+      
+      - name: Install PIO
+        run: python3 get-platformio.py
+
+      - name: Check
+        run: pio check
