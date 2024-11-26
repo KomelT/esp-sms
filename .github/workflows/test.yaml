@@ -14,10 +14,7 @@ jobs:
         run: python3 get-platformio.py
 
       - name: Add path
-        run: mkdir -p /usr/local/bin \
-            ln -s ~/.platformio/penv/bin/platformio /usr/local/bin/platformio \
-            ln -s ~/.platformio/penv/bin/pio /usr/local/bin/pio \
-            ln -s ~/.platformio/penv/bin/piodebuggdb /usr/local/bin/piodebuggdb
+        run: mkdir -p /usr/local/bin && ln -s ~/.platformio/penv/bin/pio /usr/local/bin/pio \
 
       - name: Check
         run: platformio check
